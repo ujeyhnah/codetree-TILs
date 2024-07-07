@@ -1,5 +1,5 @@
 mon = int(input())
 if (3 <= mon <= 5): print('Spring')
-elif (6 <= mon <= 8): print('Summmer')
+elif (6 <= mon <= 8): print('Summer')
 elif (9 <= mon <= 11): print('Fall')
 else: print('Winter')

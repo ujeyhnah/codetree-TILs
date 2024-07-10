@@ -5,4 +5,5 @@ for _ in range(5):
         chk = 1
     else:
         chk = 0
+        break
 print(chk)

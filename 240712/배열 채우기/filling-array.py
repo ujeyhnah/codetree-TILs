@@ -1,5 +1,7 @@
 arr = list(map(int, input().split()))
-x = arr.index(0, 1)
+try:
+    x = arr.index(0, 1)
+except:
+    pass
 nrr = arr[:x]
-nrr.reverse()
-print(*nrr)
+print(*nrr[::-1])

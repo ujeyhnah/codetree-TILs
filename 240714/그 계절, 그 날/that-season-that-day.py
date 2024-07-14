@@ -9,7 +9,7 @@ def whether(m):
         return 'Winter'
 
 def func(y, m, d):
-    if (y % 4 == 0) or (y % 100 == 0 and y % 400 == 0):
+    if (y % 4 == 0) or (y % 4 == 0 and y % 100 == 0 and y % 400 == 0):
         if m in [1, 3, 5, 7, 8, 10, 12]:
             if 1 <= d <= 31:
                 return whether(m)

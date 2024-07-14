@@ -28,6 +28,8 @@ def func(y, m, d):
         if m == 2:
             if 1 <= d <= 29:
                 return whether(m)
+            else:
+                return -1
         else:
             return chk(m, d)
     else:
@@ -35,7 +37,9 @@ def func(y, m, d):
             if 1 <= d <= 28:
                 return whether(m)
             else:
-                return chk(m, d)
+                return -1
+        else:
+            return chk(m, d)
     return -1
 
 

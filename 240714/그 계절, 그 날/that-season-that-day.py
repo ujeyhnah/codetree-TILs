@@ -15,7 +15,7 @@ def chk(m, d):
             return whether(m)
         else:
             return -1
-    elif m in [4, 6, 9, 10]:
+    elif m in [4, 6, 9, 11]:
         if 1 <= d <= 30:
             return whether(m)
         else:

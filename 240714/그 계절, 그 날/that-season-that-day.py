@@ -16,6 +16,12 @@ def is_valid_date(year, month, day):
     if is_leap_year(year):
         days_in_month[1] = 29
 
+    if month < 1 or month > 12:
+        return False
+    
+    if day < 1 or day > days_in_month[month - 1]:
+        return False
+    
     return True
 
 def get_season(month):

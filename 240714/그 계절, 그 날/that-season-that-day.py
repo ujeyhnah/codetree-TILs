@@ -41,6 +41,7 @@ def func(y, m, d):
                 return whether(m)
             else:
                 return -1
+    return -1
 
 Y, M, D = map(int, input().split())
 print(func(Y, M, D))

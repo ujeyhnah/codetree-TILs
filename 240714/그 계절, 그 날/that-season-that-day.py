@@ -5,7 +5,7 @@ def whether(m):
         return 'Summer'
     elif 9<=m<=11:
         return 'Fall'
-    else:
+    elif m == 12 or m == 1 or m ==2:
         return 'Winter'
 
 def func(y, m, d):

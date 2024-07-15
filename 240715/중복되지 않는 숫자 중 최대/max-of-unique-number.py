@@ -8,4 +8,5 @@ for i in arr:
         max_val = i
     elif max_val < i and i in chk:
         max_val = -1
+        chk = []
 print(max_val)

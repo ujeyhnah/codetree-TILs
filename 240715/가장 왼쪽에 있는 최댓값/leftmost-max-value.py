@@ -1,6 +1,6 @@
 n = int(input())
 arr = list(map(int, input().split()))
-m = min(arr)
+m = arr[0]
 while len(arr) > 0:
     if max(arr) == m:
         print(1)

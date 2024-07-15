@@ -5,6 +5,7 @@ while len(arr) > 0:
     if max(arr) == m:
         print(1)
         break
-    x = arr.index(max(arr), 1)
-    print(x+1, end=' ')
-    arr = arr[:x]
+    else:
+        x = arr.index(max(arr), 1)
+        print(x+1, end=' ')
+        arr = arr[:x]

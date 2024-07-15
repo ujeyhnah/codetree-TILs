@@ -1,6 +1,6 @@
 n = int(input())
 arr = list(map(int, input().split()))
-chk = [0] * 1001
+chk = [0] * (max(arr)+1)
 for i in arr:
     chk[i] += 1
 while True:

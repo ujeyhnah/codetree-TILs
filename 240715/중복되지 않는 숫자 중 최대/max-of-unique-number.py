@@ -11,4 +11,4 @@ while True:
         print(max(arr))
         break
     else:
-        chk.remove(max(arr))
+        arr.remove(max(arr))

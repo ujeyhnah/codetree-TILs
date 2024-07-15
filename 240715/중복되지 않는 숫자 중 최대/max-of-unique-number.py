@@ -1,12 +1,14 @@
 n = int(input())
 arr = list(map(int, input().split()))
-chk = []
-max_val = -1
+chk = [0] * 1001
 for i in arr:
-    if i not in chk:
-        chk.append(i)
-        if i > max_val:
-            max_val = i
-    elif i in chk and i > max_val:
-        max_val = -1
-print(max_val)
+    chk[i] += 1
+while True:
+    if len(chk) == 0:
+        print(-1)
+        break
+    if chk[max(arr)] == 1:
+        print(max(arr))
+        break
+    else:
+        chk.remove(max(arr))

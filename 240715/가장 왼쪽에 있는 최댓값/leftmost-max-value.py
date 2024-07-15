@@ -1,10 +1,10 @@
 n = int(input())
 arr = list(map(int, input().split()))
-f = arr[0]
-while True:
-    x = arr.index(max(arr),1)
+m = min(arr)
+while len(arr) > 0:
+    x = arr.index(max(arr), 1)
     print(x+1, end=' ')
     arr = arr[:x]
-    if f == max(arr):
+    if max(arr) == m:
         print(1)
         break

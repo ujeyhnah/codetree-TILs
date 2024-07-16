@@ -1,3 +1,6 @@
 s = input()
 o = input()
-print(s.index(o[1],1) if o in s else -1)
+if o in s:
+    print(s.index(o, 1))
+else:
+    print(-1)

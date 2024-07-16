@@ -5,10 +5,10 @@ for i in range(n):
             if i == 0:
                 print('*', end=' ')
             else:
-                print('', end=' ')
+                print(' ', end=' ')
         else:
             if i <= j:
                 print('*', end=' ')
             else:
-                print('', end=' ')
+                print(' ', end=' ')
     print()

@@ -1,6 +1,8 @@
 s = input()
 s = list(s)
-while len(s) > 1:
+while True:
+    if len(s) == 1:
+        break
     x = int(input())
     if len(s) >= x:
         s.pop(x)

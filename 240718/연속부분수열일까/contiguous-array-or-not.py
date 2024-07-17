@@ -5,4 +5,10 @@ for i in range(n1):
     if arr[i] == brr[0]:
         idx = i
         break
-print('Yes' if arr[i:len(brr)+i] == brr else 'No')
+trr = arr[i:len(brr)+i]
+chk = 1
+for i in range(n2):
+    if trr[i] != brr[i]:
+        chk = 0
+        break
+print('Yes' if chk==1 else 'No')

@@ -1,7 +1,8 @@
 def strverse(s):
-    s.reverse()
-    return ''.join(s)
-a = input().split()
+    result = ''
+    for i in range(len(s)-1, -1, -1):
+        result += s[i]
+    return result
+a = input()
 x = strverse(a)
-a = ''.join(a)
 print('Yes' if a == x else 'No' )

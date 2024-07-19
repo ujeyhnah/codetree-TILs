@@ -1,5 +1,8 @@
 def func(a, b):
-    return max(a,b)+25, min(a,b)*2
+    if a > b:
+        return a+25, b*2
+    else:
+        return a*2, b+25
 a, b = map(int, input().split())
-res1, res2 = func(a, b)
-print(min(res1,res2), max(res1, res2))
+a, b = func(a, b)
+print(a, b)

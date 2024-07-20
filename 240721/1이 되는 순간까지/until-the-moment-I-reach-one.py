@@ -1,14 +1,9 @@
-cnt = 0
 def func(n):
-    global cnt
     if n == 1:
-        return n
+        return 0
     if n % 2 == 0:
-        cnt += 1
-        return func(n//2)
+        return func(n//2) + 1
     else:
-        cnt += 1
-        return func(n//3)
+        return func(n//3) + 1
 n = int(input())
-func(n)
-print(cnt)
+print(func(n))

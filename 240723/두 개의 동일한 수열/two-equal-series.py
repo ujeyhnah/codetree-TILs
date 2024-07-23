@@ -1,0 +1,6 @@
+n = int(input())
+arr = list(map(int, input().split()))
+brr = list(map(int, input().split()))
+arr.sort()
+brr.sort()
+print('Yes' if arr == brr else 'No')

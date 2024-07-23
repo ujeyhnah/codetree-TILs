@@ -1,0 +1,7 @@
+s1 = input()
+s2 = input()
+s1 = list(s1)
+s2 = list(s2)
+s1.sort()
+s2.sort()
+print('Yes' if s1 == s2 else 'No')

@@ -1,0 +1,5 @@
+n = int(input())
+nrr = list(map(int, input().split()))
+nrr.sort()
+print(*nrr)
+print(*nrr[::-1])

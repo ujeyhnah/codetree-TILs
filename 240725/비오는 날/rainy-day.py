@@ -1,3 +1,4 @@
+import datetime
 class Whether:
     def __init__(self, day, week, whe):
         self.day = day
@@ -14,6 +15,12 @@ for i in range(n):
     if whethers[i].whe == 'Rain':
         rains.append(whethers[i])
 for i in range(len(rains)-1):
-    if rains[i].day < rains[i].day:
+    if int(rains[i].day[:4]) < int(rains[i+1].day[:4]):
         rains[i], rains[i+1] = rains[i+1], rains[i]
-print(rains[0].day, rains[0].week, rains[0].whe)
+    elif int(rains[i].day[:4]) == int(rains[i+1].day[:4]):
+        if int(rains[i].day[5:7]) < int(rains[i+1].day[5:7]):
+            rains[i], rains[i+1] = rains[i+1], rains[i]
+        elif int(rains[i].day[5:7]) == int(rains[i].day[5:7]):
+            if int(rains[i].day[8:10]) < int(rains[i+1].day[8:10]):
+                rains[i], rains[i+1] = rains[i+1], rains[i]
+print(rains[-1].day, rains[-1].week, rains[-1].whe)

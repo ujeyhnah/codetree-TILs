@@ -1,24 +1,38 @@
-from datetime import date, timedelta
-
 def count_weekday_occurrences(m1, d1, m2, d2, A):
-    weekday_map = {"Mon": 0, "Tue": 1, "Wed": 2, "Thu": 3, "Fri": 4, "Sat": 5, "Sun": 6}
+    weekday_map = {
+        "Mon": 0,
+        "Tue": 1,
+        "Wed": 2,
+        "Thu": 3,
+        "Fri": 4,
+        "Sat": 5,
+        "Sun": 6
+    }
+    
+    days_in_month = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     
     target_weekday = weekday_map[A]
     
-    start_date = date(2024, m1, d1)
-    end_date = date(2024, m2, d2)
+    def calculate_day_of_week(month, day):
+        days_since_start = sum(days_in_month[:month-1]) + (day - 1)
+        return (days_since_start % 7) 
     
-    count = 0
+    current_month = m1
+    current_day = d1
+    occurrences = 0
     
-    current_date = start_date
-    while current_date <= end_date:
-        if current_date.weekday() == target_weekday:
-            count += 1
-        current_date += timedelta(days=1)
+    while (current_month < m2) or (current_month == m2 and current_day <= d2):
+        if calculate_day_of_week(current_month, current_day) == target_weekday:
+            occurrences += 1
+        
+        current_day += 1
+        if current_day > days_in_month[current_month-1]:
+            current_day = 1
+            current_month += 1
     
-    return count
+    return occurrences
 
 m1, d1, m2, d2 = map(int, input().split())
 A = input()
-result = count_weekday_occurrences(m1, d1, m2, d2, A)
-print(result)
+
+print(count_weekday_occurrences(m1, d1, m2, d2, A))

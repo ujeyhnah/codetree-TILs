@@ -1,38 +1,23 @@
-def count_weekday_occurrences(m1, d1, m2, d2, A):
-    weekday_map = {
-        "Mon": 0,
-        "Tue": 1,
-        "Wed": 2,
-        "Thu": 3,
-        "Fri": 4,
-        "Sat": 5,
-        "Sun": 6
-    }
-    
-    days_in_month = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-    
-    target_weekday = weekday_map[A]
-    
-    def calculate_day_of_week(month, day):
-        days_since_start = sum(days_in_month[:month-1]) + (day - 1)
-        return (days_since_start % 7) 
-    
-    current_month = m1
-    current_day = d1
-    occurrences = 0
-    
-    while (current_month < m2) or (current_month == m2 and current_day <= d2):
-        if calculate_day_of_week(current_month, current_day) == target_weekday:
-            occurrences += 1
-        
-        current_day += 1
-        if current_day > days_in_month[current_month-1]:
-            current_day = 1
-            current_month += 1
-    
-    return occurrences
+def week(m, d):
+    day_of_week = [0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    total = d
+    for i in range(1, m):
+        total += day_of_week[i]
+
+    return total
 
 m1, d1, m2, d2 = map(int, input().split())
 A = input()
+total1 = week(m1, d1)
+total2 = week(m2, d2)
 
-print(count_weekday_occurrences(m1, d1, m2, d2, A))
+total3 = total2 - total1 + 1
+week_name = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+
+
+cnt = total3 // 7
+idx = week_name.index(A)
+
+if idx + 1 <= (total3 % 7):
+    cnt += 1
+print(cnt)

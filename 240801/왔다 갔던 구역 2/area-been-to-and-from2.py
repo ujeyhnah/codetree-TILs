@@ -1,5 +1,5 @@
 n = int(input())
-nrr = [0] * 100001
+nrr = [0] * 10000001
 idx = 0
 for _ in range(n):
     com = input().split()

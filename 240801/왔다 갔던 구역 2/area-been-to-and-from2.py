@@ -5,11 +5,11 @@ for _ in range(n):
     com = input().split()
     if com[1] == 'L':
         for i in range(idx - int(com[0]), idx):
-            nrr[i+1000] += 1
+            nrr[i+100] += 1
             idx = i
     elif com[1] == 'R':
         for i in range(idx, idx+int(com[0])):
-            nrr[i+1000]+= 1
+            nrr[i+100]+= 1
             idx = i
 cnt = 0
 for i in range(len(nrr)):

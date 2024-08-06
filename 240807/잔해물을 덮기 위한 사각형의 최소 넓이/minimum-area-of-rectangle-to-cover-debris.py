@@ -1,26 +1,13 @@
-arr = [[0]*2001 for _ in range(2001)]
-
 x1, y1, x2, y2 = map(int, input().split())
-for i in range(y1, y2+1):
-    for j in range(x1, x2):
-        arr[i+1000][j+1000] = 1
-xx1, yy1, xx2, yy2 = map(int, input().split())
-for i in range(yy1, yy2):
-    for j in range(xx1, xx2):
-        arr[i+1000][j+1000] = 0
-max_x = 0
-list_y = []
-for i in range(y1, y2+1):
-    cnt_x = 0
-    for j in range(x1, x2+1):
-        if arr[i+1000][j+1000] == 1:
-            cnt_x += 1
-            if i not in list_y:
-                list_y.append(i)
-    if cnt_x > max_x:
-        max_x = cnt_x
+x_1, y_1, x_2, y_2 = map(int, input().split())
 
-if max_x != 0 or len(list_y) > 0:
-    print((list_y[-1] - list_y[0]) * max_x)
+rect = (x2 - x1) * (y2 - y1) # 첫 번째 직사각형 넓이
+ix1, iy1, ix2, iy2 = max(x1, x2), max(y1, y2), min(x_1, x_2), min(y_1, y_2) # 교집합 좌표
+
+# 교집합 넓이
+if ix1 < ix2 and iy1 < iy2:
+    irect = (ix2 - ix1) * (iy2 - iy1)
 else:
-    print(0)
+    irect = 0
+
+print(rect - irect)

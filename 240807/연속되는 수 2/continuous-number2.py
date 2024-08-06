@@ -8,6 +8,6 @@ for i in range(n-1):
     if arr[i] == arr[i+1]:
         cnt += 1
     else:
-        result = max(cnt, result)
         cnt = 1
+    result = max(cnt, result)
 print(result)

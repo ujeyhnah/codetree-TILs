@@ -18,4 +18,7 @@ for i in range(len(arr)):
                 list_y.append(i)
     if cnt_x > max_x:
         max_x = cnt_x
-print((list_y[-1] - list_y[0]) * (max_x-1))
+if max_x != 0 and len(list_y) > 0:
+    print((list_y[-1] - list_y[0]) * (max_x-1))
+else:
+    print(0)

@@ -7,7 +7,6 @@ x1, y1, x2, y2 = map(int, input().split())
 for i in range(y1, y2):
     for j in range(x1, x2):
         arr[i+1000][j+1000] = 0
-cnt_y = 0
 list_x = []
 for i in range(len(arr)):
     cnt_x = 0
@@ -15,6 +14,5 @@ for i in range(len(arr)):
         if arr[i][j] == 1:
             cnt_x += 1
     if cnt_x > 0:
-        cnt_y += 1
-    list_x.append(cnt_x)
-print(cnt_y * max(list_x))
+        list_x.append(cnt_x)
+print(len(list_x) * max(list_x))

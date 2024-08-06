@@ -5,10 +5,8 @@ rect = (x2_1 - x1_1) * (y2_1 - y1_1) # 첫 번째 직사각형 넓이
 ix1, iy1, ix2, iy2 = max(x1_1, x1_2), max(y1_1, y1_2), min(x2_1, x2_2),min(y2_1, y2_2) # 교집합 좌표
 
 # 교집합 넓이
-if ix1 < ix2 and iy1 < iy2:
-    irect = (ix2 - ix1) * (iy2 - iy1)
-else:
-    irect = 0
+irect = (ix2 - ix1) * (iy2 - iy1)
+
 result = rect - irect
 if result < rect:
     print(rect)

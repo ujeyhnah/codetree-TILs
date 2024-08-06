@@ -5,7 +5,7 @@ for i in range(y1, y2+1):
     for j in range(x1, x2):
         arr[i+1000][j+1000] = 1
 xx1, yy1, xx2, yy2 = map(int, input().split())
-for i in range(yy1, yy2+1):
+for i in range(yy1, yy2):
     for j in range(xx1, xx2):
         arr[i+1000][j+1000] = 0
 max_x = 0

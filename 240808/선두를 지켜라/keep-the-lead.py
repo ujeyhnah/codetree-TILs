@@ -18,7 +18,7 @@ for t in range(idx):
     if arr[t] > brr[t]:
         if cnt[-1] != 'a':
             cnt.append('a')
-    else:
+    elif arr[t] < brr[t]:
         if cnt[-1] != 'b':
             cnt.append('b')
 print(len(cnt)-2)

@@ -1,6 +1,6 @@
 n, m = map(int, input().split())
-arr = [0] * 1000001
-brr = [0] * 1000001
+arr = [0] * 10000001
+brr = [0] * 10000001
 idx = 0
 for _ in range(n):
     t, d = input().split()

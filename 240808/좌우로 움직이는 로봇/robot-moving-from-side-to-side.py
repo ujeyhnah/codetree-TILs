@@ -1,6 +1,6 @@
 n, m = map(int, input().split())
-arr = [0] * 10000001
-brr = [0] * 10000001
+arr = [0] * 1000001
+brr = [0] * 1000001
 idx = 0
 for _ in range(n):
     t, d = input().split()
@@ -27,7 +27,7 @@ for _ in range(m):
     idx = i
 brr[idx+1:] = [brr[idx]] * (len(brr) - idx)
 cnt = 0
-for t in range(1, idx):
+for t in range(1, len(arr)):
     if arr[t-1] != brr[t-1] and arr[t] == brr[t]:
         cnt += 1
 print(cnt)

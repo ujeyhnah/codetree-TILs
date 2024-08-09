@@ -11,11 +11,9 @@ for hand in timelist:
         if prr[x][0] == 1 and (1 <= prr[x][1] <= K):
             prr[y][0] = 1
             prr[x][1] -= 1
-            prr[y][1] -= 1
 
-        elif prr[y][0] == 1 and (1 <= prr[y][1] <= K):
+        if prr[y][0] == 1 and (1 <= prr[y][1] <= K):
             prr[x][0] = 1
-            prr[x][1] -= 1
             prr[y][1] -= 1
 
 for x in range(1, len(prr)):

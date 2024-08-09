@@ -1,7 +1,7 @@
 N, K, P, T = map(int, input().split())
 prr = [[0, K] for _ in range(N+1)]
 prr[P] = [1, K]
-timelist = [[0,0] for _ in range(1001)]
+timelist = [[0,0] for _ in range(500)]
 for _ in range(T):
     t, x, y = map(int, input().split())
     timelist[t] = [x, y]

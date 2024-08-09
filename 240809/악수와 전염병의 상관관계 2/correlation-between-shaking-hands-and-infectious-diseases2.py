@@ -10,10 +10,13 @@ for hand in timelist:
         x, y = hand[0], hand[1]
         if prr[x][0] == 1 and (1 <= prr[x][1] <= K):
             prr[y][0] = 1
-            prr[x][1] -= 1
+
         elif prr[y][0] == 1 and (1 <= prr[y][1] <= K):
             prr[x][0] = 1
-            prr[y][1] -= 1
+            
+        prr[x][1] -= 1
+        prr[y][1] -=1
+
 
 for x in range(1, len(prr)):
     print(prr[x][0], end='')

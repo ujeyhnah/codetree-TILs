@@ -14,7 +14,7 @@ for _ in range(int(input())):
     elif co[0] == 'size':
         print(len(arr))
     elif co[0] == 'empty':
-        print(1 if len(arr) > 1 else 0)
+        print(1 if len(arr) == 0 else 0)
     elif co[0] == 'front':
         print(arr[0])
     elif co[0] == 'back':
